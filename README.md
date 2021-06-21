@@ -5,8 +5,7 @@ Such a setup may be useful if you wish to have more control over your backend lo
 
 This setup allows defining routes for HTTP endpints, or custom routing logic for pages (e.g. perhaps you wish to render a different page on the same route depending on the circumstances).
 
-I tried to make the code as barebones as possible, but in a way that includes an exhibit of some common patterns of
-actually using the template. The idea is to delete most of this code to actually start a project with this template:
+I tried to make the code as barebones as possible, but in a way that exhibits some common patterns of using the template. The idea is to delete most of this code to actually start a project with this template:
 all the pages except for `main.jsx` should be deleted, as well as the demo routes in `app/route/pages.js` and `app/route/api.js`. The rest should be a minimal skeleton.
 
 I wrote a tutorial for this project, which can be found here https://dev.to/alexeydc/express-nextjs-sample-tutorial-integration-485f
