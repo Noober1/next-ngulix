@@ -88,3 +88,5 @@ cp '/Users/alexey/Library/Application Support/mkcert/rootCA.pem' 'mkcert/rootCA.
 SSL_ROOTCA_PATH = mkcert/rootCA-key.pem
 ```
 
+# License
+The MIT license in package.json is right - i.e. you can use this code for whatever you like, including closed source or commercial projects. The MIT license implies attribution, and I'll of course appreciate any actual attribution!
