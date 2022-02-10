@@ -1,10 +1,10 @@
 {
-  "name": "nextjs_express_template",
+  "name": "next-ngulix",
   "version": "1.0.0",
-  "description": "Template for a NextJS+ExpressJS web app",
+  "description": "My Ngulix site",
   "main": "index.js",
-  "repository": "git@github.com:alexey-dc/nextjs_express_template.git",
-  "author": "alexey-dc <alexey.chernikov.it@gmail.com>",
+  "repository": "git@github.com:Noober1/next-ngulix.git",
+  "author": "Noober1 <cucu@ruhiyatna.id>",
   "license": "MIT",
   "dependencies": {
     "cross-env": "^7.0.3",
