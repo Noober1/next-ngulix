@@ -21,7 +21,7 @@ class Server {
 		this.port = port
 		this.httpsMode = httpsMode
 		this.express = express()
-		this.next = next({ dev: environment !== 'production' })
+		this.next = next({dev: environment !== 'production'})
 		this.middleware = new Middleware(this.express)
 		this.router = new NextjsExpressRouter(this.express, this.next)
 	}

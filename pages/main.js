@@ -9,7 +9,7 @@ const MainPage = () => {
 				<title>Entahlah, manakutau</title>
 			</Head>
 			<div>MainPage</div>
-			<Link href="/entah?q=a&b=c">
+			<Link href="/panel">
 				<a>Ke entahlah</a>
 			</Link>
 		</>
