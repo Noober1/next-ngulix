@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../view/layout.jsx'
+import Layout from '../../view/layout'
 
 export default function NextjsDefaultRouting(props) {
   return <Layout>

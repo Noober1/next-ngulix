@@ -4,34 +4,39 @@ const NextjsExpressRouter = require("./nextjs_express_router")
 const Middleware = require("./middleware")
 
 const httpServer = (express) => {
-  return require('http').createServer(express)
+	return require('http').createServer(express)
 }
 
 const httpsServer = (express) => {
-  const fs = require('fs')
-  const options = {
-    key: fs.readFileSync(process.env.SSL_PRIVATE_KEY_PATH, 'utf8'),
-    cert: fs.readFileSync(process.env.SSL_CERTIFICATE_PATH, 'utf8')
-  }
-  return require('https').createServer(options, express)
+	const fs = require('fs')
+	const options = {
+		key: fs.readFileSync(process.env.SSL_PRIVATE_KEY_PATH, 'utf8'),
+		cert: fs.readFileSync(process.env.SSL_CERTIFICATE_PATH, 'utf8')
+	}
+	return require('https').createServer(options, express)
 }
 
 class Server {
-  constructor(port) {
-    this.port = port
-    this.express = express()
-    this.next = next({ dev: process.env.NODE_ENV !== 'production' })
-    this.middleware = new Middleware(this.express)
-    this.router = new NextjsExpressRouter(this.express, this.next)
-  }
+	constructor(port, environment, httpsMode) {
+		this.port = port
+		this.httpsMode = httpsMode
+		this.express = express()
+		this.next = next({ dev: environment !== 'production' })
+		this.middleware = new Middleware(this.express)
+		this.router = new NextjsExpressRouter(this.express, this.next)
+	}
 
-  async start() {
-    await this.next.prepare()
-    await this.middleware.init()
-    await this.router.init()
-    this.server = httpsServer(this.express)
-    this.server.listen(process.env.EXPRESS_PORT)
-  }
+	async start() {
+		await this.next.prepare()
+		await this.middleware.init()
+		await this.router.init()
+		if (this.httpsMode) {
+			this.server = httpsServer(this.express)
+		} else {
+			this.server = httpServer(this.express)
+		}
+		this.server.listen(this.port)
+	}
 }
 
 module.exports = Server

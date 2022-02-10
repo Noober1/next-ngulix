@@ -1,9 +1,13 @@
 require("dotenv").config()
 const Server = require("./app/server")
+const { PORT, NODE_ENV, HTTPS_MODE } = process.env
+const listenPort = PORT || 3000
+const environment = NODE_ENV || 'development'
+const httpsMode = HTTPS_MODE == true
 
-const begin = async () => {
-  await new Server(process.env.EXPRESS_PORT).start()
-  console.log(`Server running in --- ${process.env.NODE_ENV} --- on port ${process.env.EXPRESS_PORT}`)
+const startingServer = async () => {
+  await new Server(listenPort, environment, httpsMode).start()
+  console.log(`Server running in ${environment} mode on port ${listenPort} with TLS ${httpsMode ? 'ON' : 'OFF'}`)
 }
 
-begin()
+startingServer()
