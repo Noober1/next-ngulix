@@ -5,6 +5,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import NextNprogress from 'nextjs-progressbar';
 import { useSelector, useStore } from 'react-redux';
 import { selectConfig } from '../redux/slices/configSlice';
+import '../styles/global.css'
 
 function MyApp({ Component, pageProps }) {
 
