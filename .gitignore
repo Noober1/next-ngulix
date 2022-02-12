@@ -33,3 +33,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#my personal file
+http.rest
+
+#other
+app/migrations/*

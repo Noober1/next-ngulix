@@ -12,6 +12,9 @@ const MainPage = () => {
 			<Link href="/panel">
 				<a>Ke entahlah</a>
 			</Link>
+			<Link href="/sample">
+				<a>Sample page</a>
+			</Link>
 		</>
 	)
 }

@@ -20,5 +20,12 @@ export default function Main(props) {
     <a style={{fontSize: "36px"}} href="/demo/my_special_page/a_special_string"> Test special routing </a>
     <h3> Exhibit C </h3>
     <a style={{fontSize: "36px"}} href="/nextjs_default_routing"> Test the fallback to NextJS's default routing mechanism </a>
+    <h3>Other demo</h3>
+    <ul>
+      <li>
+        <a style={{fontSize: "36px"}} href="/demo/changeTheme"> Theme Changer </a>
+      </li>
+    </ul>
+    <a style={{fontSize: "36px"}} href="/"> Root Page </a>
   </Layout>
 }
