@@ -11,8 +11,8 @@ const SamplePage = () => {
                 </Link>
             </li>
             <li>
-                <Link href="/sample/changeTheme">
-                    <a>Change Theme</a>
+                <Link href="/sample/LoadingScreen">
+                    <a>Loading Screen</a>
                 </Link>
             </li>
         </ul>

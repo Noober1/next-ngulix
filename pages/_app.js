@@ -6,6 +6,7 @@ import NextNprogress from 'nextjs-progressbar';
 import { useSelector, useStore } from 'react-redux';
 import { selectConfig } from '../redux/slices/configSlice';
 import '../styles/global.css'
+import LoadingScreen from '../components/organisms/LoadingScreen';
 
 function MyApp({ Component, pageProps }) {
 
@@ -31,16 +32,7 @@ function MyApp({ Component, pageProps }) {
         <PersistGate persistor={store.__persistor}>
             <ThemeProvider theme={themes[config.theme]}>
                 <CssBaseline/>
-                <NextNprogress
-                    color={themes[config.theme].palette.primary.main || '#17B5F1'}
-                    startPosition={0.3}
-					stopDelayMs={200}
-					height={3}
-					showOnShallow={true}
-					options={{
-						showSpinner:true
-					}}
-                />
+                <LoadingScreen/>
                 {getLayout(<Component {...pageProps} />)}
             </ThemeProvider>
         </PersistGate>

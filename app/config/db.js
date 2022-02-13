@@ -2,7 +2,7 @@ module.exports = {
 	HOST: "localhost",
 	USER: "root",
 	PASSWORD: "",
-	DB: "next-ngulix",
+	DB: "next",
 	dialect: "mysql",
 	pool: {
 		max: 5,
