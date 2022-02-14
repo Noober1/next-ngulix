@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
             },
         }
     }, {
+        freezeTableName: true,
         hooks: {
             beforeCreate: user => {
                 user.password = hashPassword(user.password)
