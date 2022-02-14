@@ -1,6 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
+import Tooltip from '../components/molecules/Tooltip'
+import { Typography, Button } from '@mui/material'
+import Link from '../components/molecules/Link'
 
 const MainPage = () => {
 	return (
@@ -10,11 +12,20 @@ const MainPage = () => {
 			</Head>
 			<div>MainPage</div>
 			<Link href="/panel">
-				<a>Ke entahlah</a>
+				Ke Entahlah
 			</Link>
-			<Link href="/sample">
-				<a>Sample page</a>
-			</Link>
+			<Tooltip
+				arrow={true}
+				title={
+					<Typography>
+						Test
+					</Typography>
+				}
+			>
+				<Link href="/sample" className="test">
+					Entah
+				</Link>
+			</Tooltip>
 		</>
 	)
 }
