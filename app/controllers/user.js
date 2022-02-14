@@ -1,8 +1,9 @@
 const { HttpError } = require('http-errors')
 const { sendApiError } = require('../lib')
 const { User } = require('../models')
+const controllers = {}
 
-const getAllUser = async(req,res,next) => {
+controllers.getAllUser = async(req,res,next) => {
     try {
         const getData = await User.findAll()
 
@@ -12,7 +13,7 @@ const getAllUser = async(req,res,next) => {
     }
 }
 
-const createUser = async(req,res,next) => {
+controllers.createUser = async(req,res,next) => {
     try {
         await User.create({
             username: req.body.username,
@@ -29,7 +30,4 @@ const createUser = async(req,res,next) => {
     }
 }
 
-module.exports = {
-    getAllUser,
-    createUser
-}
+module.exports = controllers

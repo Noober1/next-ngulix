@@ -1,14 +1,15 @@
 const { User } = require('../models')
 const { sendError } = require('../lib')
 const httpStatus = require('http-status')
+const controllers = {}
 
-const indexPage = (req,res) => {
+controllers.indexPage = (req,res) => {
     return res.json({
         authRoute:'OK'
     })
 }
 
-const getUserById = (req,res,next) => {
+controllers.getUserById = (req,res,next) => {
     try {
         return res.json({
             id: req.params.id || ''
@@ -18,7 +19,7 @@ const getUserById = (req,res,next) => {
     }
 }
 
-const authUser = async(req,res,next) => {
+controllers.authUser = async(req,res,next) => {
     try {
         const getData = await User.findOne({
             where: {
@@ -35,8 +36,4 @@ const authUser = async(req,res,next) => {
     }
 }
 
-module.exports = {
-    indexPage,
-    getUserById,
-    authUser
-}
+module.exports = controllers
