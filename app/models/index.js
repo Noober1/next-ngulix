@@ -41,5 +41,6 @@ const db = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password
 module.exports = {
 	sequelize: db,
 	Sequelize: Sequelize,
-	User: require("./user")(db, Sequelize)
+	User: require("./user")(db, Sequelize),
+	Post: require("./post")(db, Sequelize)
 }
