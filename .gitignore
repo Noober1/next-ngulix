@@ -38,4 +38,4 @@ yarn-error.log*
 http.rest
 
 #other
-app/migrations/*
+app/config/db.json
