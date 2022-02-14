@@ -1,4 +1,15 @@
 {
-    "watch": ["server.js", "app/","redux/"],
+    "watch": [
+        "app/server.js",
+        "app/config/db.json",
+        "app/controllers",
+        "app/models",
+        "app/routes",
+        "app/apiRoutes.js",
+        "app/middleware.js",
+        "app/pagesRoutes.js",
+        "app/next_js_express_router.js",
+        "redux/"
+    ],
     "ext": "js"
 }
