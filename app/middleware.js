@@ -14,7 +14,7 @@ class Middleware {
 		this.express.use(bodyParser.json());
 		this.express.use(bodyParser.urlencoded({ extended: false }));
 		// server favicon
-		this.express.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
+		this.express.use(favicon(path.join(__dirname, '..', 'public', 'logo.png')));
 		// helmet
 		this.express.use(helmet())
 		// sync sequelize, database ORM with sequelize
