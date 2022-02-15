@@ -3,6 +3,7 @@ const path = require('path')
 const favicon = require('serve-favicon');
 const helmet = require('helmet')
 const db = require('./models/')
+const express = require('express')
 
 class Middleware {
 	constructor(express) {
@@ -15,6 +16,8 @@ class Middleware {
 		this.express.use(bodyParser.urlencoded({ extended: false }));
 		// server favicon
 		this.express.use(favicon(path.join(__dirname, '..', 'public', 'logo.png')));
+		// set directory path for static files
+		this.express.use(express.static('public'))
 		// helmet
 		this.express.use(helmet())
 		// sync sequelize, database ORM with sequelize

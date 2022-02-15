@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Tooltip from '../components/molecules/Tooltip'
-import { Typography, Button } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import Link from '../components/molecules/Link'
 
 const MainPage = () => {

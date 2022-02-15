@@ -17,7 +17,7 @@ const LoadingScreen = props => {
 	let timer;
 	let isLoading = false;
 	let activeRequests = 0;
-	const delay = 250;
+	const delay = 2500;
 
 	function showLoading() {
 		if (isLoading) return

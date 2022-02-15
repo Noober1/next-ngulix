@@ -13,6 +13,7 @@
     "@mui/material": "^5.4.1",
     "@mui/styles": "^5.4.1",
     "@reduxjs/toolkit": "^1.7.2",
+    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "clsx": "^1.1.1",
     "cross-env": "^7.0.3",
