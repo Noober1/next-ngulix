@@ -9,7 +9,7 @@ const backdropStyles = {
 const Loading = ({isLoading}) => {
 	return (
 		<Backdrop className="" sx={backdropStyles} open={isLoading}>
-			<img className="w-full max-w-xs hidden sm:block" src="/logo.png" alt={process.env.APP_NAME || 'Ngulix'}/>
+			<img className="w-full max-w-xs hidden sm:block" src="/logo.png"/>
 		</Backdrop>
 	)
 }

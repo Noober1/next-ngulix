@@ -8,7 +8,7 @@ import { forwardRef } from 'react'
 const Link = forwardRef(({className, href, children, ...props}, ref) => {
     return(
         <NextLink href={href}>
-            <MUILink className={clsx('cursor-pointer', className)} ref={ref} component="a" {...props}>
+            <MUILink className={clsx('cursor-pointer', className)} ref={ref} component="a" href={href} {...props}>
                 {children}
             </MUILink>
         </NextLink>

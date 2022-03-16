@@ -8,7 +8,7 @@ import { hideLoadingScreen, selectNoPersistConfig, showLoadingScreen } from '../
 import { useDispatch } from 'react-redux'
 import Loading from '../molecules/Loading';
 
-const LoadingScreen = props => {
+const LoadingScreen = ({delay}) => {
 	const dispatch = useDispatch()
 	const { loadingScreen } = useSelector(selectNoPersistConfig)
 	const router = useRouter()
@@ -17,7 +17,6 @@ const LoadingScreen = props => {
 	let timer;
 	let isLoading = false;
 	let activeRequests = 0;
-	const delay = 2500;
 
 	function showLoading() {
 		if (isLoading) return
@@ -49,11 +48,15 @@ const LoadingScreen = props => {
 	}, [])
 	
 
-	return (
-		<Loading isLoading={loadingScreen}/>
-	)
+	return <Loading isLoading={loadingScreen}/>
 }
 
-LoadingScreen.propTypes = {}
+LoadingScreen.defaultValue = {
+	delay: 1000
+}
+
+LoadingScreen.propTypes = {
+	delay: PropTypes.number
+}
 
 export default LoadingScreen

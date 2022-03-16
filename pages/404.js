@@ -11,7 +11,7 @@ const CustomNotFoundPage = () => {
                 title='Halaman tidak ditemukan'
             />
             <div className="w-screen h-screen flex items-center text-center flex-col justify-center">
-                <Paper className='w-full max-w-md mx-auto p-5'>
+                <div className='w-full max-w-md mx-auto p-5'>
                     <Typography variant="h1" gutterBottom>
                         t(404)t
                     </Typography>
@@ -23,7 +23,7 @@ const CustomNotFoundPage = () => {
                             Kembali ke halaman utama
                         </Link>
                     </Typography>
-                </Paper>
+                </div>
             </div>
         </>
     )

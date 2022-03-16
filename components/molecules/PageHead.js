@@ -10,23 +10,26 @@ const PageHead = props => {
 	return (
 		<Head>
 			<title>
-				{titlePage ? titlePage + ' - ' + appName : appName}
+				{titlePage ? titlePage + (props.disableAppName ? '' : ' - ' + appName) : appName}
 			</title>
 			<meta name="robots" content={props.allowIndexing ? 'index' : 'noindex'} />
+			<meta name="description" content={props.description} />
 		</Head>
 	)
 }
 
 PageHead.defaultProps = {
 	title: null,
-	withAppName:true,
-	allowIndexing:true
+	disableAppName:false,
+	allowIndexing:true,
+	description: "No Description"
 }
 
 PageHead.propTypes = {
 	title: PropTypes.string,
-	withAppName: PropTypes.bool,
-	allowIndexing: PropTypes.bool
+	disableAppName: PropTypes.bool,
+	allowIndexing: PropTypes.bool,
+	description: PropTypes.string
 }
 
 export default PageHead

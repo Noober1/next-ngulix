@@ -11,8 +11,8 @@ const MainPage = () => {
 				<title>Entahlah, manakutau</title>
 			</Head>
 			<div>MainPage</div>
-			<Link href="/panel">
-				Ke Entahlah
+			<Link href="/profile">
+				Ke profile
 			</Link>
 			<Tooltip
 				arrow={true}
